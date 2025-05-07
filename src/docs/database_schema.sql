@@ -1,0 +1,49 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS pos_db;
+USE pos_db;
+
+-- Users table
+CREATE TABLE Users (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    Role VARCHAR(20) NOT NULL,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Products table
+CREATE TABLE Products (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Price DECIMAL(10,2) NOT NULL,
+    PrintReceipt BOOLEAN DEFAULT TRUE,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Sales table
+CREATE TABLE Sales (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL,
+    TotalPrice DECIMAL(10,2) NOT NULL,
+    UserId INT NOT NULL,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ProductId) REFERENCES Products(Id),
+    FOREIGN KEY (UserId) REFERENCES Users(Id)
+);
+
+-- CashBalance table
+CREATE TABLE CashBalance (
+    Id INT PRIMARY KEY AUTO_INCREMENT,
+    Balance DECIMAL(10,2) NOT NULL DEFAULT 0.00,
+    LastUpdated DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Insert default admin user (password: admin123)
+INSERT INTO Users (Username, PasswordHash, Role) 
+VALUES ('admin', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewKy7I8W7KQY7z5O', 'Admin');
+
+-- Insert initial cash balance
+INSERT INTO CashBalance (Balance) VALUES (0.00); 

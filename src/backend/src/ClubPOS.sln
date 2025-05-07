@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubPOS.API", "ClubPOS.API\ClubPOS.API.csproj", "{919F9D93-9B23-48EE-84F9-C4D3EAB60E37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubPOS.Core", "ClubPOS.Core\ClubPOS.Core.csproj", "{0E80AC82-0937-4E24-9BBA-0809DB04C303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubPOS.Infrastructure", "ClubPOS.Infrastructure\ClubPOS.Infrastructure.csproj", "{E66DDBE1-9CCF-4BF5-AAB8-551F7DE5EA0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{919F9D93-9B23-48EE-84F9-C4D3EAB60E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919F9D93-9B23-48EE-84F9-C4D3EAB60E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919F9D93-9B23-48EE-84F9-C4D3EAB60E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919F9D93-9B23-48EE-84F9-C4D3EAB60E37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E80AC82-0937-4E24-9BBA-0809DB04C303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E80AC82-0937-4E24-9BBA-0809DB04C303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E80AC82-0937-4E24-9BBA-0809DB04C303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E80AC82-0937-4E24-9BBA-0809DB04C303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E66DDBE1-9CCF-4BF5-AAB8-551F7DE5EA0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E66DDBE1-9CCF-4BF5-AAB8-551F7DE5EA0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E66DDBE1-9CCF-4BF5-AAB8-551F7DE5EA0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E66DDBE1-9CCF-4BF5-AAB8-551F7DE5EA0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
