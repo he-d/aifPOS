@@ -12,9 +12,9 @@ namespace ClubPOS.Core.Interfaces
         Task<IEnumerable<Sale>> GetAllAsync();
         Task<IEnumerable<Sale>> GetByDateRangeAsync(DateTime startDate, DateTime endDate);
         Task<IEnumerable<Sale>> GetByUserIdAsync(int userId);
-        Task<Sale> CreateSaleAsync(Sale sale, IEnumerable<SaleItem> items);
-        Task UpdateSaleAsync(Sale sale);
-        Task DeleteSaleAsync(int id);
+        Task<Sale> CreateAsync(Sale sale);
+        Task UpdateAsync(Sale sale);
+        Task DeleteAsync(int id);
         Task<decimal> GetTotalSalesByDateRangeAsync(DateTime startDate, DateTime endDate);
         Task<decimal> GetTotalSalesByUserIdAsync(int userId, DateTime startDate, DateTime endDate);
         Task<string> GenerateReceiptNumberAsync();

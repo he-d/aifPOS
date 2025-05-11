@@ -15,6 +15,5 @@ namespace ClubPOS.Core.Interfaces
         Task UpdateAsync(Product product);
         Task DeleteAsync(int id);
         Task UpdateStockAsync(int id, int quantity);
-        Task<bool> ValidateStockLevelAsync(int id, int quantity);
     }
 } 
