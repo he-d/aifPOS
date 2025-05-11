@@ -32,7 +32,8 @@ namespace ClubPOS.API.Controllers
         [HttpPost("print")]
         public async Task<ActionResult> PrintReceipt([FromBody] Sale sale)
         {
-            var result = await _printerService.PrintReceiptAsync(sale);
+            var receiptContent = await _printerService.GenerateReceiptAsync(sale);
+            var result = await _printerService.PrintReceiptAsync(receiptContent);
             if (!result)
             {
                 return BadRequest("Failed to print receipt");
